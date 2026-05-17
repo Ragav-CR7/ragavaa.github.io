@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ragavaa M - Personal Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/Personal-portfolio/favicon.svg" />
+    <link rel="apple-touch-icon" href="/Personal-portfolio/apple-touch-icon.png" />
   </head>
   <body>
     <div id="app"></div>
+    <script type="module">
+      import('/Personal-portfolio/assets/index-JtHQOOoq.js').then(() => {
+        console.log('Client bundle loaded');
+      }).catch(err => {
+        console.error('Failed to load client bundle:', err);
+      });
+    </script>
   </body>
 </html>
