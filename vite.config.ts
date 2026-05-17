@@ -11,7 +11,8 @@ const port = Number(process.env.PORT ?? 5173);
 export default defineConfig({
 	vite: {
 		server: {
-			port,
+			host: '0.0.0.0',
+			allowedHosts:true,
 			strictPort: false,
 		},
 	},
