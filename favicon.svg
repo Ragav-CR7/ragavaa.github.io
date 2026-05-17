@@ -1,0 +1,148 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="64" fill="#03040A"/>
+
+  <defs>
+    <!-- Premium silver-blue gradient -->
+    <linearGradient id="mainGrad" x1="40" y1="40" x2="220" y2="220">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E8F3FF"/>
+      <stop offset="65%" stop-color="#A9D6FF"/>
+      <stop offset="100%" stop-color="#6FB8FF"/>
+    </linearGradient>
+
+    <!-- Glow gradient -->
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8FD3FF" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Outer aura -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#60B8FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#60B8FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Blur -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Ultra glow -->
+    <filter id="ultraGlow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix
+        in="blur"
+        mode="matrix"
+        values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 20 -8"
+      />
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="128" cy="128" r="92" fill="url(#bgGlow)"/>
+
+  <!-- Stars -->
+  <g opacity="0.9">
+    <circle cx="48" cy="52" r="1.8" fill="white"/>
+    <circle cx="200" cy="60" r="1.4" fill="white"/>
+    <circle cx="218" cy="140" r="1.5" fill="white"/>
+    <circle cx="72" cy="212" r="1.7" fill="white"/>
+    <circle cx="42" cy="170" r="1.2" fill="white"/>
+    <circle cx="180" cy="205" r="1.8" fill="white"/>
+  </g>
+
+  <!-- Outer orbital rings -->
+  <circle
+    cx="128"
+    cy="128"
+    r="82"
+    stroke="rgba(255,255,255,0.08)"
+    stroke-width="1.2"
+    stroke-dasharray="5 8"
+    fill="none"
+  />
+
+  <circle
+    cx="128"
+    cy="128"
+    r="62"
+    stroke="rgba(255,255,255,0.06)"
+    stroke-width="1"
+    stroke-dasharray="3 6"
+    fill="none"
+  />
+
+  <!-- Glow behind logo -->
+  <path
+    d="M84 70V186
+       M84 70H134
+       C163 70 180 86 180 111
+       C180 136 163 151 134 151
+       H84
+       M130 151L182 186"
+    stroke="#6FC2FF"
+    stroke-width="24"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.22"
+    filter="url(#ultraGlow)"
+  />
+
+  <!-- Main futuristic R -->
+  <path
+    d="M84 70V186
+       M84 70H134
+       C163 70 180 86 180 111
+       C180 136 163 151 134 151
+       H84
+       M130 151L182 186"
+    stroke="url(#mainGrad)"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    filter="url(#softGlow)"
+  />
+
+  <!-- Metallic edge highlights -->
+  <path
+    d="M87 76V98"
+    stroke="url(#shineGrad)"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.9"
+  />
+
+  <path
+    d="M126 74H142"
+    stroke="url(#shineGrad)"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    opacity="0.8"
+  />
+
+  <!-- Floating AI nodes -->
+  <g filter="url(#softGlow)">
+    <circle cx="84" cy="70" r="7" fill="#FFFFFF"/>
+    <circle cx="180" cy="111" r="8" fill="#BCE2FF"/>
+    <circle cx="84" cy="186" r="7" fill="#FFFFFF"/>
+    <circle cx="182" cy="186" r="8" fill="#7BC8FF"/>
+  </g>
+
+  <!-- Node highlights -->
+  <g opacity="0.9">
+    <circle cx="82" cy="68" r="2" fill="white"/>
+    <circle cx="178" cy="108" r="2" fill="white"/>
+    <circle cx="82" cy="183" r="2" fill="white"/>
+    <circle cx="180" cy="183" r="2" fill="white"/>
+  </g>
+</svg>
+
