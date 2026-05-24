@@ -103,18 +103,6 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="mt-10">
-            <a
-              href="https://forms.gle/c3a25P3tNi7XZ3yx5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-              style={{ fontSize: "16px", fontWeight: 500, padding: "16px 32px" }}
-            >
-              Fill Contact Form
-              <span>→</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>

@@ -153,11 +153,12 @@ export default function Projects() {
               </p>
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex flex-wrap gap-2">
-                  {p.stack.map((s) => (
-                    <span key={s} className="skill-tag">
-                      {s}
-                    </span>
-                  ))}
+                  {p.kind === "personal" &&
+                    p.stack.map((s) => (
+                      <span key={s} className="skill-tag">
+                        {s}
+                      </span>
+                    ))}
                 </div>
                 {p.kind === "personal" && (p.github || p.kaggle) && (
                   <a
