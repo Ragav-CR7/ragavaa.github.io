@@ -7,9 +7,14 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:vercel": "vite build && node -e \"require('fs').cpSync('.output/public', 'dist', {recursive: true})\"",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy:check": "npm run lint && npm run build",
+    "deploy:cloudflare": "npm run build && wrangler pages deploy .output/public",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "npm run build && netlify deploy --prod"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
